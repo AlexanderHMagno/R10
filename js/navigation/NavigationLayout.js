@@ -8,6 +8,8 @@ import FavesScreen from "../screens/Faves";
 import MapScreen from "../screens/Map";
 import ScheduleScreen from "../screens/Schedule";
 import Ionicons from "react-native-vector-icons/Ionicons";
+import { sharedNavigationOptions } from "./config";
+import design from "../config/styles";
 
 const AboutStack = createStackNavigator({
   About: AboutScreen
@@ -33,6 +35,7 @@ export default createBottomTabNavigator(
   {
     initialRouteName: "About",
     defaultNavigationOptions: ({ navigation }) => ({
+      ...sharedNavigationOptions(navigation),
       tabBarIcon: ({ focused, horizontal, tintColor }) => {
         const { routeName } = navigation.state;
         let IconComponent = Ionicons;
@@ -55,10 +58,11 @@ export default createBottomTabNavigator(
       }
     }),
     tabBarOptions: {
-      activeBackgroundColor: "black",
-      inactiveBackgroundColor: "black",
       activeTintColor: "white",
-      inactiveTintColor: "gray"
+      inactiveTintColor: design.colors.MediumGrey,
+      labelStyle: 10,
+      style: { backgroundColor: "black" },
+      tabStyle: { fontFamily: design.fonts.primary }
     }
   }
 );
