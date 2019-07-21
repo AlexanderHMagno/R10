@@ -5,12 +5,12 @@ import { gql } from "apollo-boost";
 import styles from "./styles";
 import Schedule from "./Schedule";
 
-const ALL_CONDUCTS = gql`
+const ALL_SCHEDULE = gql`
   query {
-    allConducts {
-      id
+    allSessions {
       title
-      description
+      location
+      startTime
     }
   }
 `;
@@ -18,7 +18,7 @@ const ALL_CONDUCTS = gql`
 class ScheduleContainer extends Component {
   render() {
     return (
-      <Query query={ALL_CONDUCTS}>
+      <Query query={ALL_SCHEDULE}>
         {({ loading, error, data }) => {
           if (loading)
             return (
@@ -27,7 +27,7 @@ class ScheduleContainer extends Component {
               </View>
             );
           if (error) return <Text>Error :(</Text>;
-          return <Schedule data={data.allConducts} />;
+          return <Schedule data={data.allSessions} />;
         }}
       </Query>
     );

@@ -11,18 +11,46 @@ import Ionicons from "react-native-vector-icons/Ionicons";
 import { sharedNavigationOptions } from "./config";
 import design from "../config/styles";
 
-const AboutStack = createStackNavigator({
-  About: AboutScreen
-});
-const FavesStack = createStackNavigator({
-  Faves: FavesScreen
-});
-const MapStack = createStackNavigator({
-  Map: MapScreen
-});
-const ScheduleStack = createStackNavigator({
-  Schedule: ScheduleScreen
-});
+const AboutStack = createStackNavigator(
+  {
+    About: AboutScreen
+  },
+  {
+    defaultNavigationOptions: ({ navigation }) => ({
+      ...sharedNavigationOptions("alex")
+    })
+  }
+);
+const FavesStack = createStackNavigator(
+  {
+    Faves: FavesScreen
+  },
+  {
+    defaultNavigationOptions: ({ navigation }) => ({
+      ...sharedNavigationOptions(navigation)
+    })
+  }
+);
+const MapStack = createStackNavigator(
+  {
+    Map: MapScreen
+  },
+  {
+    defaultNavigationOptions: ({ navigation }) => ({
+      ...sharedNavigationOptions(navigation)
+    })
+  }
+);
+const ScheduleStack = createStackNavigator(
+  {
+    Schedule: ScheduleScreen
+  },
+  {
+    defaultNavigationOptions: ({ navigation }) => ({
+      ...sharedNavigationOptions(navigation)
+    })
+  }
+);
 
 export default createBottomTabNavigator(
   {
@@ -33,9 +61,8 @@ export default createBottomTabNavigator(
   },
   //theses are the options to work with the navigation bar
   {
-    initialRouteName: "About",
+    initialRouteName: "Schedule",
     defaultNavigationOptions: ({ navigation }) => ({
-      ...sharedNavigationOptions(navigation),
       tabBarIcon: ({ focused, horizontal, tintColor }) => {
         const { routeName } = navigation.state;
         let IconComponent = Ionicons;
@@ -60,9 +87,11 @@ export default createBottomTabNavigator(
     tabBarOptions: {
       activeTintColor: "white",
       inactiveTintColor: design.colors.MediumGrey,
-      labelStyle: 10,
-      style: { backgroundColor: "black" },
-      tabStyle: { fontFamily: design.fonts.primary }
+      labelStyle: {
+        fontSize: 10,
+        fontFamily: design.fonts.primary
+      },
+      style: { backgroundColor: "black" }
     }
   }
 );

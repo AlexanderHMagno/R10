@@ -7,8 +7,8 @@ const design = {
     Red: "#cf392a"
   },
   fonts: {
-    primary: "Montserrat Regular",
-    secundary: "Montserrat Light"
+    primary: "Montserrat",
+    secundary: "Montserrat-Light"
   }
 };
 

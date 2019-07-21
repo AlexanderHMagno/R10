@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 import { Header } from "react-navigation";
 import LinearGradient from "react-native-linear-gradient";
 
@@ -9,9 +9,10 @@ const GradientHeader = props => (
       colors={["#cf392a", "#9963ea"]}
       start={{ x: 0.0, y: 1.0 }}
       end={{ x: 1.0, y: 0.0 }}
-      style={[{ height: 64, width: "100%" }]}
-    />
-    {console.log(...props)}
+      style={[StyleSheet.absoluteFill, { height: 120, width: "100%" }]}
+    >
+      <Text>{props.navigation.state.routname}</Text>
+    </LinearGradient>
     <Header {...props} />
   </View>
 );
