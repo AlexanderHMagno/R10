@@ -7,6 +7,7 @@ import AboutScreen from "../screens/About";
 import FavesScreen from "../screens/Faves";
 import MapScreen from "../screens/Map";
 import ScheduleScreen from "../screens/Schedule";
+import SessionsScreen from "../screens/Session";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { sharedNavigationOptions } from "./config";
 import design from "../config/styles";
@@ -17,7 +18,7 @@ const AboutStack = createStackNavigator(
   },
   {
     defaultNavigationOptions: ({ navigation }) => ({
-      ...sharedNavigationOptions("alex")
+      ...sharedNavigationOptions(navigation)
     })
   }
 );
@@ -43,7 +44,8 @@ const MapStack = createStackNavigator(
 );
 const ScheduleStack = createStackNavigator(
   {
-    Schedule: ScheduleScreen
+    Schedule: ScheduleScreen,
+    Sessions: SessionsScreen
   },
   {
     defaultNavigationOptions: ({ navigation }) => ({
@@ -58,6 +60,7 @@ export default createBottomTabNavigator(
     Map: MapStack,
     Faves: FavesStack,
     About: AboutStack
+    // Sessions: SessionsStack
   },
   //theses are the options to work with the navigation bar
   {

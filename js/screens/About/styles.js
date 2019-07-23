@@ -3,34 +3,46 @@ import design from "../../config/styles";
 
 const styles = StyleSheet.create({
   fullContainer: {
-    // marginTop: 100,
     height: "100%",
     width: "100%",
     display: "flex",
-    // flex: 4,
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "stretch"
   },
-  linearGradient: {
-    width: "100%",
-    height: 200
-  },
   topLogo: {
-    flex: 1,
+    paddingTop: "15%",
     width: "100%",
-    maxHeight: 100,
     justifyContent: "center",
     alignItems: "center"
+  },
+  separator: {
+    height: 1,
+    margin: "5%",
+    width: "90%",
+    backgroundColor: "#CED0CE"
+  },
+  introductionTitle: {
+    fontSize: 25,
+    fontWeight: "bold",
+    padding: 15
+  },
+  introductionParagraph: {
+    fontSize: 16,
+    padding: 15,
+    lineHeight: 30
   },
   containerList: {
     color: design.colors.Purple,
     textAlign: "center",
-    flex: 5
+    flexGrow: 1,
+    justifyContent: "space-between"
   },
   colorList: {
     color: design.colors.Purple,
-    padding: 15
+    padding: 15,
+    fontWeight: "bold",
+    fontSize: 16
   }
 });
 

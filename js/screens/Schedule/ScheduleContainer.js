@@ -11,11 +11,19 @@ const ALL_SCHEDULE = gql`
       title
       location
       startTime
+      description
+      speaker {
+        name
+        image
+      }
     }
   }
 `;
 
 class ScheduleContainer extends Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     return (
       <Query query={ALL_SCHEDULE}>
@@ -27,7 +35,12 @@ class ScheduleContainer extends Component {
               </View>
             );
           if (error) return <Text>Error :(</Text>;
-          return <Schedule data={data.allSessions} />;
+          return (
+            <Schedule
+              data={data.allSessions}
+              navigation={this.props.navigation}
+            />
+          );
         }}
       </Query>
     );

@@ -8,6 +8,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@react-native-community/async-storage": "^1.5.1",
     "apollo-boost": "^0.4.3",
     "graphql": "^14.4.2",
     "prop-types": "^15.7.2",
@@ -33,6 +34,8 @@
     "preset": "react-native"
   },
   "rnpm": {
-    "assets": [ "js/assets/fonts" ]
+    "assets": [
+      "js/assets/fonts"
+    ]
   }
 }
