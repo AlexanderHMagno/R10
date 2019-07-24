@@ -15,6 +15,13 @@ const styles = StyleSheet.create({
     paddingBottom: 5,
     paddingLeft: 15
   },
+  heartContainer: {
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    paddingRight: 20
+  },
   sessionsTitle: {
     fontWeight: "bold",
     padding: 15,
@@ -27,6 +34,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: design.colors.MediumGrey
   },
+  subInfoContainer: { flex: 6 },
   introductionParagraph: {
     fontSize: 24,
     padding: 15,

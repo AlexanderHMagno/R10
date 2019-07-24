@@ -1,9 +1,9 @@
 import React from "react";
 import AsyncStorage from "@react-native-community/async-storage";
 
-export const storeData = async (name, value) => {
+export const storeData = async key => {
   try {
-    return await AsyncStorage.setItem(name, value);
+    return await AsyncStorage.setItem(key, 1);
   } catch (e) {
     console.log(e);
   }
@@ -24,4 +24,12 @@ export const getAllKeys = async () => {
   } catch (e) {
     console.log(e);
   }
+};
+
+export const getMultiple = async keys => {
+  let values;
+  try {
+    values = await AsyncStorage.multiGet(keys);
+  } catch (e) {}
+  return values;
 };

@@ -3,7 +3,9 @@ import PropTypes from "prop-types";
 import { View, Text, SectionList, TouchableHighlight } from "react-native";
 import { formatSessionData } from "./helpers";
 import styles from "./styles";
-import { createStackNavigator, createAppContainer } from "react-navigation";
+import FavesContext from "../../assets/context/FavesContext";
+import Ionicons from "react-native-vector-icons/Ionicons";
+import design from "../../config/styles";
 
 class Schedule extends React.Component {
   constructor(props) {
@@ -26,10 +28,12 @@ class Schedule extends React.Component {
       minute: "2-digit"
     });
   };
-
+  static contextType = FavesContext;
   render() {
+    const { state } = this.context;
     const { data } = this.props;
-    const sessions = formatSessionData(data);
+    const sessions = formatSessionData(data, state.faveIds);
+    const IconComponent = Ionicons;
 
     return (
       <SectionList
@@ -46,9 +50,18 @@ class Schedule extends React.Component {
               <Text style={styles.sessionsTitle} key={index}>
                 {item.title}
               </Text>
-              <Text style={styles.sessionsLocation} key={index}>
-                {item.location}
-              </Text>
+              <View style={styles.heartContainer}>
+                <Text style={styles.sessionsLocation} key={index}>
+                  {item.location}
+                </Text>
+                {item.favorite && (
+                  <IconComponent
+                    name={`ios-heart`}
+                    size={20}
+                    color={design.colors.Red}
+                  />
+                )}
+              </View>
             </View>
           </TouchableHighlight>
         )}

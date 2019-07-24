@@ -2,14 +2,8 @@
  *    if two or more sessions start at the same hour both of them will be grouped together.
  * @param {array}  holding the information per each session (objects)
  * return {array}  an organized array per start hour of each session */
-export const formatSessionData = (sessions, fav) => {
-  sessions.map((x, index) => {
-    if (fav.indexOf(x.id) == -1) {
-      sessions[index]["favorite"] = false;
-    } else {
-      sessions[index]["favorite"] = true;
-    }
-  });
+export const formatSessionData = sessions => {
+  console.log(sessions);
   return sessions
     .reduce((acc, curr) => {
       const timeExists = acc.find(section => section.title === curr.startTime);

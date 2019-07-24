@@ -1,16 +1,44 @@
 import React, { Component } from "react";
-// import the Realm helpers you just created here
+import {
+  storeData,
+  getAllKeys,
+  getMultiple,
+  removeValue
+} from "../../../config/model";
+
 const FavesContext = React.createContext();
 class FavesProvider extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      faveIds: []
+      faveIds: [],
+      hasInitialize: false
     };
+  }
+  async componentDidMount() {
+    await this.getFavedSessionIds();
+    this.setState({
+      hasInitialize: true
+    });
+  }
+  async getFavedSessionIds() {
+    this.setState({ faveIds: await getAllKeys() });
+  }
+  addFaveSession(sessionId) {
+    storeData(sessionId);
+  }
+  removeFaveSession(sessionId) {
+    removeValue(sessionId);
   }
   render() {
     return (
-      <FavesContext.Provider value={this.state}>
+      <FavesContext.Provider
+        value={{
+          remove: this.removeFaveSession,
+          add: this.addFaveSession,
+          state: this.state
+        }}
+      >
         {this.props.children}
       </FavesContext.Provider>
     );

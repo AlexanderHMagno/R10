@@ -19,11 +19,19 @@ const styles = StyleSheet.create({
     padding: 15,
     fontSize: 16
   },
-  sessionsLocation: {
+  heartContainer: {
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
     padding: 15,
     paddingTop: 0,
+    paddingRight: 20
+  },
+  sessionsLocation: {
     color: design.colors.MediumGrey
   },
+
   container: {
     flex: 1,
     justifyContent: "center"

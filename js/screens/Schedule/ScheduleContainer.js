@@ -8,6 +8,7 @@ import Schedule from "./Schedule";
 const ALL_SCHEDULE = gql`
   query {
     allSessions {
+      id
       title
       location
       startTime

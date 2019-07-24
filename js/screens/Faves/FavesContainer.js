@@ -5,20 +5,30 @@ import { gql } from "apollo-boost";
 import styles from "./styles";
 import Faves from "./Faves";
 
-const ALL_CONDUCTS = gql`
+const ALL_Faves = gql`
   query {
-    allConducts {
+    allSessions {
       id
       title
+      location
+      startTime
       description
+      speaker {
+        name
+        image
+      }
     }
   }
 `;
 
 class FavesContainer extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
-      <Query query={ALL_CONDUCTS}>
+      <Query query={ALL_Faves}>
         {({ loading, error, data }) => {
           if (loading)
             return (
@@ -27,7 +37,9 @@ class FavesContainer extends Component {
               </View>
             );
           if (error) return <Text>Error :(</Text>;
-          return <Faves data={data.allConducts} />;
+          return (
+            <Faves data={data.allSessions} navigation={this.props.navigation} />
+          );
         }}
       </Query>
     );

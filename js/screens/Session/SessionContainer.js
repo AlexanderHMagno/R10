@@ -12,7 +12,6 @@ class SessionContainer extends Component {
   render() {
     const { navigation } = this.props;
     const infoSession = navigation.getParam("infoSession");
-    console.log({ infoSession });
     return <Session data={infoSession} />;
   }
 }
