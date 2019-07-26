@@ -26,16 +26,18 @@ class FavesProvider extends Component {
   }
   addFaveSession(sessionId) {
     storeData(sessionId);
+    this.getFavedSessionIds();
   }
   removeFaveSession(sessionId) {
     removeValue(sessionId);
+    this.getFavedSessionIds();
   }
   render() {
     return (
       <FavesContext.Provider
         value={{
-          remove: this.removeFaveSession,
-          add: this.addFaveSession,
+          remove: this.removeFaveSession.bind(this),
+          add: this.addFaveSession.bind(this),
           state: this.state
         }}
       >

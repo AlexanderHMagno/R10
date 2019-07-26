@@ -25,6 +25,9 @@ class FavesContainer extends Component {
   constructor(props) {
     super(props);
   }
+  componentWillReceiveProps() {
+    console.log("alexander");
+  }
 
   render() {
     return (

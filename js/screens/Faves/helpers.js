@@ -3,7 +3,6 @@
  * @param {array}  holding the information per each session (objects)
  * return {array}  an organized array per start hour of each session */
 export const formatSessionData = sessions => {
-  console.log(sessions);
   return sessions
     .reduce((acc, curr) => {
       const timeExists = acc.find(section => section.title === curr.startTime);

@@ -8,7 +8,10 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@material-ui/core": "^4.2.1",
+    "@material-ui/icons": "^4.2.1",
     "@react-native-community/async-storage": "^1.5.1",
+    "accordion-collapse-react-native": "^0.1.11",
     "apollo-boost": "^0.4.3",
     "graphql": "^14.4.2",
     "prop-types": "^15.7.2",

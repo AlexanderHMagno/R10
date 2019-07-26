@@ -1,6 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { View, Text, Image, TouchableOpacity } from "react-native";
+import {
+  Platform,
+  View,
+  Text,
+  Image,
+  TouchableOpacity,
+  TouchableHighlight
+} from "react-native";
 import styles from "./styles";
 import LinearGradient from "react-native-linear-gradient";
 import design from "../../config/styles";
@@ -53,7 +60,14 @@ class Session extends React.Component {
             <Text style={[styles.sessionsLocation, { marginTop: 20 }]}>
               {data.location}
             </Text>
-            {this.state.favorites && (
+            {this.state.favorites && Platform.OS == "android" && (
+              <IconComponent
+                name={`ios-heart`}
+                size={20}
+                color={design.colors.Purple}
+              />
+            )}
+            {this.state.favorites && Platform.OS == "ios" && (
               <IconComponent
                 name={`ios-heart`}
                 size={20}
@@ -75,13 +89,20 @@ class Session extends React.Component {
             <Text style={styles.sessionsLocation}>Presented by:</Text>
             <View style={styles.speakerContainer}>
               {data.speaker.image != null && (
-                <Image
-                  style={styles.imageSpeaker}
-                  source={{ uri: data.speaker.image }}
-                />
+                <TouchableOpacity onPress={() => console.log(data.speaker)}>
+                  <Image
+                    style={styles.imageSpeaker}
+                    source={{ uri: data.speaker.image }}
+                  />
+                </TouchableOpacity>
               )}
 
-              <Text style={styles.nameSpeaker}>{data.speaker.name}</Text>
+              <Text
+                style={styles.nameSpeaker}
+                onPress={() => console.log(data.speaker)}
+              >
+                {data.speaker.name}
+              </Text>
             </View>
             <View style={styles.separator} />
 
@@ -108,6 +129,6 @@ class Session extends React.Component {
 }
 
 Session.propTypes = {
-  data: PropTypes.array.isRequired
+  data: PropTypes.object.isRequired
 };
 export default Session;

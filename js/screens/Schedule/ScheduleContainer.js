@@ -16,6 +16,8 @@ const ALL_SCHEDULE = gql`
       speaker {
         name
         image
+        bio
+        url
       }
     }
   }
