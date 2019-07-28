@@ -12,7 +12,7 @@ class SessionContainer extends Component {
   render() {
     const { navigation } = this.props;
     const infoSession = navigation.getParam("infoSession");
-    return <Session data={infoSession} />;
+    return <Session data={infoSession} navigation={navigation} />;
   }
 }
 

@@ -10,7 +10,7 @@ const generalInfo = () => {
       </Text>
       <Text style={styles.introductionTitle}>Date & Venue</Text>
       <Text style={styles.introductionParagraph}>
-        The R10 conference will take place on Saturday, June 27, 2017 in
+        The R10 conference will take place on Saturday, June 27, 2020 in
         Vancouver, BC.
       </Text>
       <Text style={styles.introductionTitle}>Code of Conduct</Text>

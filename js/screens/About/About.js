@@ -44,36 +44,3 @@ About.propTypes = {
   data: PropTypes.array.isRequired
 };
 export default About;
-
-// class List extends React.Component() {
-//   constructor(props) {
-//     super(props);
-//     console.log(props);
-//   }
-
-//   _head(item) {
-//     return (
-//       <Separator bordered style={{ alignItems: "center" }}>
-//         <Text>{item.title}</Text>
-//       </Separator>
-//     );
-//   }
-
-//   _body(item) {
-//     return (
-//       <View style={{ padding: 10 }}>
-//         <Text style={{ textAlign: "center" }}>{item.body}</Text>
-//       </View>
-//     );
-//   }
-
-//   render() {
-//     return (
-//       <AccordionList
-//         list={this.state.list}
-//         header={this._head}
-//         body={this._body}
-//       />
-//     );
-//   }
-// }

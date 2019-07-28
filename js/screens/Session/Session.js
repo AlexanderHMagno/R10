@@ -1,25 +1,20 @@
 import React from "react";
 import PropTypes from "prop-types";
-import {
-  Platform,
-  View,
-  Text,
-  Image,
-  TouchableOpacity,
-  TouchableHighlight
-} from "react-native";
+import { Platform, View, Text, Image, TouchableOpacity } from "react-native";
 import styles from "./styles";
 import LinearGradient from "react-native-linear-gradient";
 import design from "../../config/styles";
 import FavesContext from "../../assets/context/FavesContext";
 import Ionicons from "react-native-vector-icons/Ionicons";
+import Modalito from "./Speaker";
 
 class Session extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       favorites: true,
-      function: ""
+      function: "",
+      modalVisible: false
     };
   }
   renderGroupHour = hour => {
@@ -47,9 +42,12 @@ class Session extends React.Component {
       });
     }
   };
-
+  setModalVisible() {
+    this.setState({ modalVisible: !this.state.modalVisible });
+  }
   render() {
     const { data } = this.props;
+    const { speaker } = data;
     const sessionChecker = data.speaker === null;
     let IconComponent = Ionicons;
 
@@ -89,7 +87,7 @@ class Session extends React.Component {
             <Text style={styles.sessionsLocation}>Presented by:</Text>
             <View style={styles.speakerContainer}>
               {data.speaker.image != null && (
-                <TouchableOpacity onPress={() => console.log(data.speaker)}>
+                <TouchableOpacity onPress={() => this.setModalVisible()}>
                   <Image
                     style={styles.imageSpeaker}
                     source={{ uri: data.speaker.image }}
@@ -121,6 +119,11 @@ class Session extends React.Component {
                 </Text>
               </LinearGradient>
             </TouchableOpacity>
+            <Modalito
+              toggle={this.setModalVisible.bind(this)}
+              visible={this.state.modalVisible}
+              speaker={speaker}
+            />
           </View>
         )}
       </View>

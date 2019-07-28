@@ -16,6 +16,8 @@ const ALL_Faves = gql`
       speaker {
         name
         image
+        bio
+        url
       }
     }
   }
