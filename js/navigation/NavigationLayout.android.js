@@ -14,7 +14,7 @@ import Ionicons from "react-native-vector-icons/Ionicons";
 import { sharedNavigationOptions } from "./config";
 import design from "../config/styles";
 
-const AboutStack = createDrawerNavigator(
+const AboutStack = createStackNavigator(
   {
     About: AboutScreen
   },
@@ -24,7 +24,7 @@ const AboutStack = createDrawerNavigator(
     })
   }
 );
-const FavesStack = createDrawerNavigator(
+const FavesStack = createStackNavigator(
   {
     Faves: FavesScreen
   },
@@ -34,7 +34,7 @@ const FavesStack = createDrawerNavigator(
     })
   }
 );
-const MapStack = createDrawerNavigator(
+const MapStack = createStackNavigator(
   {
     Map: MapScreen
   },
@@ -44,7 +44,7 @@ const MapStack = createDrawerNavigator(
     })
   }
 );
-const ScheduleStack = createDrawerNavigator(
+const ScheduleStack = createStackNavigator(
   {
     Schedule: ScheduleScreen,
     Sessions: SessionsScreen
@@ -67,37 +67,40 @@ export default createDrawerNavigator(
   //theses are the options to work with the navigation bar
   {
     initialRouteName: "Schedule",
-    edgeWidth: 200,
+    edgeWidth: 100,
     defaultNavigationOptions: ({ navigation }) => ({
       drawerIcon: ({ focused, horizontal, tintColor }) => {
         const { routeName } = navigation.state;
         let IconComponent = Ionicons;
         let iconName;
         if (routeName === "About") {
-          iconName = `ios-information-circle${focused ? "" : "-outline"}`;
+          iconName = `md-information-circle${focused ? "" : "-outline"}`;
           // Sometimes we want to add badges to some icons.
           // You can check the implementation below.
           //   IconComponent = HomeIconWithBadge;
         } else if (routeName === "Faves") {
-          iconName = `ios-heart`;
+          iconName = `md-heart`;
         } else if (routeName === "Map") {
-          iconName = `ios-navigate`;
+          iconName = `md-navigate`;
         } else if (routeName === "Schedule") {
-          iconName = `ios-calendar`;
+          iconName = `md-calendar`;
         }
 
         // You can return any component that you like here!
         return <IconComponent name={iconName} size={25} color={tintColor} />;
       }
     }),
-    tabBarOptions: {
-      activeTintColor: "white",
+
+    contentOptions: {
+      activeTintColor: design.colors.Purple,
       inactiveTintColor: design.colors.MediumGrey,
+
       labelStyle: {
-        fontSize: 10,
-        fontFamily: design.fonts.primaryr
-      },
-      style: { backgroundColor: "black" }
+        fontSize: 16,
+        // color: design.colors.MediumGrey,
+        fontFamily: design.fonts.primary
+      }
+      // style: { backgroundColor: "black" }
     }
   }
 );

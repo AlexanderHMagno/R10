@@ -37,14 +37,15 @@ class Map extends React.Component {
         region={this.state.region}
         // onRegionChange={this.onRegionChange.bind(this)}
         style={{ width: "100%", height: "100%" }}
-        showsTraffic="false"
-        loadingEnabled="true"
+        showsTraffic={false}
+        loadingEnabled={true}
       >
         {this.state.markers.map(marker => (
           <Marker
             coordinate={marker.coordinates}
             title={marker.title}
             image={require("../../assets/images/map_pin.png")}
+            key={marker.title}
             // description={marker.description}
           />
         ))}

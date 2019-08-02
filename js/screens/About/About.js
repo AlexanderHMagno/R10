@@ -51,7 +51,7 @@ class About extends React.Component {
           <View style={styles.separator} />
           <GeneralInfo />
           {data.map(({ id, title, description }) => (
-            <Collapse>
+            <Collapse key={id}>
               <CollapseHeader>
                 <Text style={styles.colorList}>+ {title}</Text>
               </CollapseHeader>

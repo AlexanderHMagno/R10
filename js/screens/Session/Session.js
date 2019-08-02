@@ -23,6 +23,7 @@ class Session extends React.Component {
       minute: "2-digit"
     });
   };
+
   toggleFavorites = (func, id) => {
     this.setState({
       favorites: !this.state.favorites
@@ -30,6 +31,13 @@ class Session extends React.Component {
     func(id);
   };
   static contextType = FavesContext;
+  componentWillReceiveProps() {
+    let new_func = this.context.add;
+    if (this.state.function == this.context.add) new_func = this.context.remove;
+    this.setState({
+      function: new_func
+    });
+  }
   componentDidMount = () => {
     if (this.context.state.faveIds.indexOf(this.props.data.id) == -1) {
       this.setState({
@@ -60,7 +68,7 @@ class Session extends React.Component {
             </Text>
             {this.state.favorites && Platform.OS == "android" && (
               <IconComponent
-                name={`ios-heart`}
+                name={`md-heart`}
                 size={20}
                 color={design.colors.Purple}
               />
