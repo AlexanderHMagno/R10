@@ -11,5 +11,7 @@ export const formatSessionData = sessions => {
         : acc.push({ title: curr.startTime, data: [curr] });
       return acc;
     }, [])
-    .sort((a, b) => a.title - b.title);
+    .sort(
+      (a, b) => new Date(a.title).getHours() - new Date(b.title).getHours()
+    );
 };
