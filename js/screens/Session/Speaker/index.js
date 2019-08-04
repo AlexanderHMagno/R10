@@ -11,6 +11,7 @@ import {
 } from "react-native";
 import styles from "./style";
 import LinearGradient from "react-native-linear-gradient";
+import design from "../../../config/styles";
 
 let Modalito = props => {
   const { toggle, visible, speaker } = props;
@@ -18,12 +19,7 @@ let Modalito = props => {
   return (
     <View>
       <Modal animationType="slide" transparent={false} visible={visible}>
-        <View
-          style={{
-            flex: 1,
-            backgroundColor: "black"
-          }}
-        >
+        <View style={styles.modalContainer}>
           <View style={styles.titleContainer}>
             <TouchableHighlight
               onPress={() => {
@@ -37,7 +33,7 @@ let Modalito = props => {
               About the speaker
             </Text>
           </View>
-          <View style={{ flex: 9 }}>
+          <View style={styles.secondContainer}>
             <ScrollView>
               <View style={styles.speakerContainer}>
                 <Image style={styles.imageSpeaker} source={{ uri: image }} />
@@ -45,9 +41,7 @@ let Modalito = props => {
                 <Text style={styles.bio}>{bio}</Text>
                 <TouchableOpacity onPress={() => Linking.openURL(url)}>
                   <LinearGradient
-                    colors={["#9963ea", "#3b5998", "#192f6a"]}
-                    // start={{ x: 1.0, y: 0.0 }}
-                    // end={{ x: 0.0, y: 1.0 }}
+                    colors={design.buttonStyle}
                     style={[styles.button]}
                   >
                     <Text style={styles.buttonText}>

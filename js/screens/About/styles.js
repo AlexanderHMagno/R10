@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { Platform, StyleSheet } from "react-native";
 import design from "../../config/styles";
 
 const styles = StyleSheet.create({
@@ -14,35 +14,86 @@ const styles = StyleSheet.create({
     paddingTop: "15%",
     width: "100%",
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
+    ...Platform.select({
+      android: {
+        paddingTop: "5%"
+      }
+    })
   },
   separator: {
     height: 1,
-    margin: "5%",
     width: "90%",
-    backgroundColor: "#CED0CE"
+    backgroundColor: "#CED0CE",
+    ...Platform.select({
+      ios: {
+        margin: 5
+      },
+      android: {
+        margin: "2%",
+        marginLeft: "5%"
+      }
+    })
   },
   introductionTitle: {
     fontSize: 25,
     fontWeight: "bold",
-    padding: 15
+    ...Platform.select({
+      ios: {
+        padding: 15
+      },
+      android: {
+        padding: 0,
+        paddingLeft: 15,
+        color: "gray"
+      }
+    })
   },
   introductionParagraph: {
-    fontSize: 16,
-    padding: 15,
-    lineHeight: 30
+    ...Platform.select({
+      ios: {
+        fontSize: 16,
+        padding: 15,
+        lineHeight: 30,
+        fontFamily: design.fonts.primary
+      },
+      android: {
+        color: design.colors.MediumGrey,
+        fontSize: 16,
+        padding: 5,
+        paddingLeft: 15,
+        fontFamily: design.fonts.secundary,
+        fontWeight: "400"
+      }
+    })
   },
   containerList: {
     color: design.colors.Purple,
     textAlign: "center",
     flexGrow: 1,
-    justifyContent: "space-between"
+
+    ...Platform.select({
+      ios: {
+        justifyContent: "space-between"
+      },
+      android: {
+        justifyContent: "flex-start"
+      }
+    })
   },
   colorList: {
     color: design.colors.Purple,
-    padding: 15,
-    fontWeight: "bold",
-    fontSize: 16
+    fontSize: 16,
+    ...Platform.select({
+      ios: {
+        fontWeight: "bold",
+        padding: 15
+      },
+      android: {
+        padding: 10,
+        paddingLeft: 15
+      }
+    })
   }
 });
 

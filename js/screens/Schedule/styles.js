@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { Platform, StyleSheet } from "react-native";
 import design from "../../config/styles";
 
 const styles = StyleSheet.create({
@@ -8,16 +8,32 @@ const styles = StyleSheet.create({
     backgroundColor: "#CED0CE"
   },
   groupHour: {
-    fontWeight: "bold",
     backgroundColor: design.colors.LightGrey,
     paddingTop: 5,
     paddingBottom: 5,
-    paddingLeft: 15
+    paddingLeft: 15,
+    ...Platform.select({
+      ios: {
+        fontWeight: "bold"
+      },
+      android: {
+        color: design.colors.darkGrey
+      }
+    })
   },
   sessionsTitle: {
-    fontWeight: "bold",
-    padding: 15,
-    fontSize: 16
+    fontSize: 16,
+    ...Platform.select({
+      ios: {
+        padding: 15,
+        fontWeight: "bold"
+      },
+      android: {
+        padding: 5,
+        paddingLeft: 15,
+        color: design.colors.darkGrey
+      }
+    })
   },
   heartContainer: {
     flex: 1,

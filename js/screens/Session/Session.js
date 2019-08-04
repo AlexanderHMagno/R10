@@ -72,6 +72,7 @@ class Session extends React.Component {
                 name={`md-heart`}
                 size={20}
                 color={design.colors.Purple}
+                style={{ paddingTop: 10 }}
               />
             )}
             {this.state.favorites && Platform.OS == "ios" && (
@@ -106,7 +107,7 @@ class Session extends React.Component {
 
               <Text
                 style={styles.nameSpeaker}
-                onPress={() => console.log(data.speaker)}
+                onPress={() => this.setModalVisible()}
               >
                 {data.speaker.name}
               </Text>
@@ -117,9 +118,7 @@ class Session extends React.Component {
               onPress={() => this.toggleFavorites(this.state.function, data.id)}
             >
               <LinearGradient
-                colors={["#9963ea", "#3b5998", "#192f6a"]}
-                // start={{ x: 1.0, y: 0.0 }}
-                // end={{ x: 0.0, y: 1.0 }}
+                colors={design.buttonStyle}
                 style={[styles.button]}
               >
                 <Text style={styles.buttonText}>

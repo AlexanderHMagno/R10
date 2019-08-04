@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { Platform, StyleSheet } from "react-native";
 import design from "../../config/styles";
 
 const styles = StyleSheet.create({
@@ -20,25 +20,57 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    paddingRight: 20
+    paddingRight: 20,
+    ...Platform.select({
+      android: {
+        marginTop: 10,
+        marginBottom: 10
+      }
+    })
   },
   sessionsTitle: {
     fontWeight: "bold",
     padding: 15,
-    fontSize: 24
+    ...Platform.select({
+      ios: {
+        fontSize: 24
+      },
+      android: {
+        paddingTop: 0,
+        fontSize: 24,
+        color: design.colors.darkGrey
+      }
+    })
   },
   sessionsLocation: {
     padding: 15,
     paddingTop: 0,
-    fontSize: 20,
-    fontWeight: "bold",
-    color: design.colors.MediumGrey
+    color: design.colors.MediumGrey,
+    ...Platform.select({
+      ios: {
+        fontWeight: "bold",
+        fontSize: 20
+      },
+      android: {
+        fontSize: 16
+      }
+    })
   },
   subInfoContainer: { flex: 6 },
   introductionParagraph: {
-    fontSize: 24,
     padding: 15,
-    lineHeight: 35
+    ...Platform.select({
+      ios: {
+        lineHeight: 35,
+        fontSize: 24
+      },
+      android: {
+        lineHeight: 24,
+        fontSize: 16,
+        color: design.colors.darkGrey,
+        fontFamily: design.fonts.secundary
+      }
+    })
   },
   container: {
     flex: 1,
@@ -46,12 +78,27 @@ const styles = StyleSheet.create({
     height: "90%"
   },
   infoContainer: {
-    flex: 2,
-    justifyContent: "flex-start"
+    justifyContent: "flex-start",
+    ...Platform.select({
+      ios: {
+        flex: 2
+      },
+      android: {
+        flex: 1
+      }
+    })
   },
   infoContainer2: {
-    flex: 1,
-    justifyContent: "flex-start"
+    justifyContent: "flex-start",
+    ...Platform.select({
+      ios: {
+        flex: 1
+      },
+      android: {
+        flex: 2,
+        paddingTop: 50
+      }
+    })
   },
   speakerContainer: {
     flexDirection: "row",
@@ -60,14 +107,29 @@ const styles = StyleSheet.create({
     marginBottom: 20
   },
   imageSpeaker: {
-    width: 75,
-    height: 75,
     borderRadius: 50,
-    marginRight: 10
+    marginRight: 10,
+    ...Platform.select({
+      ios: {
+        width: 75,
+        height: 75
+      },
+      android: {
+        width: 50,
+        height: 50
+      }
+    })
   },
   nameSpeaker: {
-    fontWeight: "bold",
-    fontSize: 16
+    fontSize: 16,
+    ...Platform.select({
+      ios: {
+        fontWeight: "bold"
+      },
+      android: {
+        color: design.colors.darkGrey
+      }
+    })
   },
   button: {
     alignItems: "center",

@@ -21,25 +21,7 @@ import GeneralInfo from "./generalInfo";
 class About extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      translateValue: new Animated.ValueXY()
-    };
   }
-
-  animateCircle = () => {
-    let matX = Math.random() * 300;
-    let matY = Math.random() * 300;
-    let time = Math.random() * 3000;
-
-    Animated.timing(this.state.translateValue, {
-      toValue: { x: matX, y: matY },
-      duration: time
-    }).start(animation => {
-      if (animation.finished) {
-        this.animateCircle();
-      }
-    });
-  };
   render() {
     const { data } = this.props;
     return (

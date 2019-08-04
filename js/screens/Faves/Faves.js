@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { View, Text, SectionList, TouchableHighlight } from "react-native";
 import { formatSessionData } from "./helpers";
-import styles from "./styles";
+import styles from "../Schedule/styles";
 import FavesContext from "../../assets/context/FavesContext";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import design from "../../config/styles";
