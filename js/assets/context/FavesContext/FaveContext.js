@@ -25,8 +25,14 @@ class FavesProvider extends Component {
     this.setState({ faveIds: await getAllKeys() });
   }
   addFaveSession(sessionId) {
-    storeData(sessionId);
+    let a = storeData(sessionId);
+    a.then(v => {
+      console.log(`all was good! ${v}`);
+    }).catch(e => {
+      console.log(`error: ${e}`);
+    });
     this.getFavedSessionIds();
+    console.log(this.state.faveIds);
   }
   removeFaveSession(sessionId) {
     removeValue(sessionId);

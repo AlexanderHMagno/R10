@@ -37,6 +37,7 @@ class Session extends React.Component {
     this.setState({
       function: new_func
     });
+    console.log(this.context);
   }
   componentDidMount = () => {
     if (this.context.state.faveIds.indexOf(this.props.data.id) == -1) {
