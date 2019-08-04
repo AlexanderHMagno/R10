@@ -65,7 +65,7 @@ export default createBottomTabNavigator(
   },
   //theses are the options to work with the navigation bar
   {
-    initialRouteName: "About",
+    initialRouteName: "Schedule",
     defaultNavigationOptions: ({ navigation }) => ({
       tabBarIcon: ({ focused, horizontal, tintColor }) => {
         const { routeName } = navigation.state;
