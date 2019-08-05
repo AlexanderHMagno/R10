@@ -26,11 +26,4 @@ R10 has a different menu depending on the platform that is been used to access i
 
 Accessing to session can be happen from schedule and from faves screens.
 
-```mermaid
-sequenceDiagram
-Schedule ->> Session: onPress.
-Faves-->>Session: onPress
-Session-->>Speaker: click to show more info of the speaker 
-Note right of Session: Session can be added <br/>or remove from <br/>sessions.
-Note left of Speaker: Click on more info <br/> will redirect to <br/> Wikipedia
-```
+![Screenshot](/js/assets/images/Flow.png)
