@@ -1,0 +1,40 @@
+dependencies: \
+  /Users/alex.home/Documents/R-Native-Test/R10/node_modules/react-native-gesture-handler/ios/RNGestureHandlerModule.m \
+  /Users/alex.home/Documents/R-Native-Test/R10/ios/Pods/Target\ Support\ Files/RNGestureHandler/RNGestureHandler-prefix.pch \
+  /Users/alex.home/Documents/R-Native-Test/R10/node_modules/react-native-gesture-handler/ios/RNGestureHandlerModule.h \
+  /Users/alex.home/Documents/R-Native-Test/R10/ios/Pods/Headers/Public/React-Core/React/RCTEventEmitter.h \
+  /Users/alex.home/Documents/R-Native-Test/R10/ios/Pods/Headers/Public/React-Core/React/RCTBridge.h \
+  /Users/alex.home/Documents/R-Native-Test/R10/ios/Pods/Headers/Public/React-Core/React/RCTBridgeDelegate.h \
+  /Users/alex.home/Documents/R-Native-Test/R10/ios/Pods/Headers/Public/React-Core/React/RCTJavaScriptLoader.h \
+  /Users/alex.home/Documents/R-Native-Test/R10/ios/Pods/Headers/Public/React-Core/React/RCTDefines.h \
+  /Users/alex.home/Documents/R-Native-Test/R10/ios/Pods/Headers/Public/React-DevSupport/React/RCTInspectorDevServerHelper.h \
+  /Users/alex.home/Documents/R-Native-Test/R10/ios/Pods/Headers/Public/React-DevSupport/React/RCTPackagerConnection.h \
+  /Users/alex.home/Documents/R-Native-Test/R10/ios/Pods/Headers/Public/React-Core/React/RCTBridgeModule.h \
+  /Users/alex.home/Documents/R-Native-Test/R10/ios/Pods/Headers/Public/React-Core/React/RCTFrameUpdate.h \
+  /Users/alex.home/Documents/R-Native-Test/R10/ios/Pods/Headers/Public/React-Core/React/RCTInvalidating.h \
+  /Users/alex.home/Documents/R-Native-Test/R10/ios/Pods/Headers/Public/React-Core/React/RCTUIManager.h \
+  /Users/alex.home/Documents/R-Native-Test/R10/ios/Pods/Headers/Public/React-Core/React/RCTRootView.h \
+  /Users/alex.home/Documents/R-Native-Test/R10/ios/Pods/Headers/Public/React-Core/React/RCTViewManager.h \
+  /Users/alex.home/Documents/R-Native-Test/R10/ios/Pods/Headers/Public/React-Core/React/RCTConvert.h \
+  /Users/alex.home/Documents/R-Native-Test/R10/ios/Pods/Headers/Public/React-Core/React/RCTAnimationType.h \
+  /Users/alex.home/Documents/R-Native-Test/R10/ios/Pods/Headers/Public/React-Core/React/RCTBorderStyle.h \
+  /Users/alex.home/Documents/R-Native-Test/R10/ios/Pods/Headers/Public/React-Core/React/RCTLog.h \
+  /Users/alex.home/Documents/R-Native-Test/R10/ios/Pods/Headers/Public/React-Core/React/RCTAssert.h \
+  /Users/alex.home/Documents/R-Native-Test/R10/ios/Pods/Headers/Public/React-Core/React/RCTUtils.h \
+  /Users/alex.home/Documents/R-Native-Test/R10/ios/Pods/Headers/Public/React-Core/React/RCTPointerEvents.h \
+  /Users/alex.home/Documents/R-Native-Test/R10/ios/Pods/Headers/Public/React-Core/React/RCTTextDecorationLineType.h \
+  /Users/alex.home/Documents/R-Native-Test/R10/ios/Pods/Headers/Private/yoga/Yoga.h \
+  /Users/alex.home/Documents/R-Native-Test/R10/ios/Pods/Headers/Private/yoga/YGEnums.h \
+  /Users/alex.home/Documents/R-Native-Test/R10/ios/Pods/Headers/Private/yoga/YGMacros.h \
+  /Users/alex.home/Documents/R-Native-Test/R10/ios/Pods/Headers/Private/yoga/YGValue.h \
+  /Users/alex.home/Documents/R-Native-Test/R10/ios/Pods/Headers/Public/React-Core/React/RCTEventDispatcher.h \
+  /Users/alex.home/Documents/R-Native-Test/R10/ios/Pods/Headers/Public/React-Core/React/UIView+React.h \
+  /Users/alex.home/Documents/R-Native-Test/R10/ios/Pods/Headers/Public/React-Core/React/RCTComponent.h \
+  /Users/alex.home/Documents/R-Native-Test/R10/ios/Pods/Headers/Public/React-Core/React/RCTUIManagerUtils.h \
+  /Users/alex.home/Documents/R-Native-Test/R10/ios/Pods/Headers/Public/React-Core/React/RCTUIManagerObserverCoordinator.h \
+  /Users/alex.home/Documents/R-Native-Test/R10/node_modules/react-native-gesture-handler/ios/RNGestureHandlerState.h \
+  /Users/alex.home/Documents/R-Native-Test/R10/node_modules/react-native-gesture-handler/ios/RNGestureHandlerDirection.h \
+  /Users/alex.home/Documents/R-Native-Test/R10/node_modules/react-native-gesture-handler/ios/RNGestureHandler.h \
+  /Users/alex.home/Documents/R-Native-Test/R10/node_modules/react-native-gesture-handler/ios/RNGestureHandlerEvents.h \
+  /Users/alex.home/Documents/R-Native-Test/R10/node_modules/react-native-gesture-handler/ios/RNGestureHandlerManager.h \
+  /Users/alex.home/Documents/R-Native-Test/R10/node_modules/react-native-gesture-handler/ios/RNGestureHandlerButton.h

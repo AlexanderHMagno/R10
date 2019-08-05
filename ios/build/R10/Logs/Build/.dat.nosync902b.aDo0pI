@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>10</integer>
+	<key>logs</key>
+	<dict>
+		<key>1320CDDA-A690-44F4-B12E-C814804A9AD6</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>1320CDDA-A690-44F4-B12E-C814804A9AD6.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>R10 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>R10</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building workspace R10 with scheme R10 and configuration Debug</string>
+			<key>timeStartedRecording</key>
+			<real>585796070.88869095</real>
+			<key>timeStoppedRecording</key>
+			<real>585796072.26321399</real>
+			<key>title</key>
+			<string>Building workspace R10 with scheme R10 and configuration Debug</string>
+			<key>uniqueIdentifier</key>
+			<string>1320CDDA-A690-44F4-B12E-C814804A9AD6</string>
+		</dict>
+		<key>44A36A21-EDF7-442A-B35B-9752450686C8</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>44A36A21-EDF7-442A-B35B-9752450686C8.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>R10 project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>R10</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building workspace R10 with scheme R10 and configuration Debug</string>
+			<key>timeStartedRecording</key>
+			<real>585796252.98957598</real>
+			<key>timeStoppedRecording</key>
+			<real>585796253.857674</real>
+			<key>title</key>
+			<string>Building workspace R10 with scheme R10 and configuration Debug</string>
+			<key>uniqueIdentifier</key>
+			<string>44A36A21-EDF7-442A-B35B-9752450686C8</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
